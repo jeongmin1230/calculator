@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
     android:padding="7dp">
 
     <TextView
@@ -11,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:textColor="@color/white"
+        android:background="#aaaaaa"
         android:padding="5dp"
         android:textSize="30dp" />
 
@@ -149,7 +148,7 @@
                 android:textSize="25dp" />
 
             <Button
-                android:id="@+id/ndot"
+                android:id="@+id/dot"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
