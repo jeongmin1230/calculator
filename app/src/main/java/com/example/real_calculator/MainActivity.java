@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 tv_input.setText("");
                 storedValue = 0.0;
                 break;
-            case R.id.Ok: // 연산 수행할 때
+            case R.id.equal: // 연산 수행할 때
                 if(current.equals("")) {
                     Toast.makeText(getApplicationContext(), "입력된 숫자가 없습니다.", Toast.LENGTH_SHORT).show();
                 } else {
