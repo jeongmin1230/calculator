@@ -132,7 +132,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onClick"
-                android:text="*"
+                android:text="X"
                 android:textSize="25dp" />
         </TableRow>
 
@@ -162,7 +162,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onClick"
-                android:text="clear"
+                android:text="AC"
                 android:textSize="20dp" />
 
             <Button
@@ -171,7 +171,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onClick"
-                android:text="/"
+                android:text="÷"
                 android:textSize="25dp" />
         </TableRow>
 
