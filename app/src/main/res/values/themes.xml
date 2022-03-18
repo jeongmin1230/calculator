@@ -14,5 +14,6 @@
         <!-- Customize your theme here. -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item> <!-- 타이틀 바 없애기 -->
     </style>
 </resources>

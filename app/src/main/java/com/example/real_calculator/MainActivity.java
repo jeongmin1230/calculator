@@ -3,6 +3,7 @@ package com.example.real_calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view) {
         String current = tv_input.getText().toString(); // tv_input 에 현재 있는 값 가져오기
+//        int int_current = Integer.parseInt(current);
 
         switch(view.getId()){ // 버튼을 누를 때마다 switch - case 문으로 버튼 누를 때마다 글자 추가되게 함
           case R.id.n0:
@@ -95,6 +97,23 @@ public class MainActivity extends AppCompatActivity {
                     tv_input.setText("");
                     break;
                 }
+            // 22.3.18(금) +/-와 %기능 추가
+            case R.id.plus_minus:
+                if(current.equals("")) {
+                    Toast.makeText(getApplicationContext(), "입력된 숫자가 없습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    // 현재 입력된 수가 양수면 - 나오게, 음수면 다시 -없어지게 코드\
+                    break;
+                }
+            case R.id.percent:
+                if(current.equals("")) {
+                    Toast.makeText(getApplicationContext(), "입력된 숫자가 없습니다.", Toast.LENGTH_SHORT).show();
+                } else {
+                    storedValue = Double.parseDouble(current);
+                    curOperator = "%";
+                    tv_input.setText("");
+                    break;
+                }
             case R.id.clear: // clear 를 눌렀을 경우 tv_input 값과 storedValue 초기화
                 tv_input.setText("");
                 storedValue = 0.0;
@@ -117,6 +136,10 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         case "÷":
                             result = storedValue / thisValue;
+                            break;
+                        case "%":
+//                            Log.i("jeongmin", "퍼센트 계산 : " + storedValue % thisValue);
+//                            result = thisValue / storedValue * 100;]
                             break;
                     }
                     tv_input.setText("" + result);
