@@ -50,7 +50,7 @@
                     android:layout_marginRight="5dp"
                     android:background="@drawable/light_gray_round_button"
                     android:textColor="@color/black"
-                    android:text="AC"
+                    android:text="Clear"
                     android:textSize="20dp" />
 
                 <androidx.appcompat.widget.AppCompatButton
